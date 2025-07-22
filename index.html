@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebeca e Miquéias</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <section class="section-primaria">
+        <img class="imagem-principal" src="img/imagem-principal.png" alt="">
+        <div class="section-primaria-conteudo-text">
+            <img class="logo-RM" src="img/logo-RM.png" alt="">
+            <div class="container-vers">
+                <h2>Isaías 41:20</h2>
+                <p>Todos verão o que aconteceu e ficarão sabendo que fui eu, o Senhor, quem fez isso.
+Todos pensarão bem e entenderão que tudo isso foi feito pelo Santo Deus de Israel.</p>
+            </div>
+            <div class="container-principal">
+                <p>Com a benção de Deus e nossos Pais.</p>
+                <h1>Rebeca e Miquéias</h1>
+                <p>Convidam para celebrar seu casamento</p>
+            </div>
+            <div class="calendario">
+            <img class="calendario-img" src="img/calendario.png" alt="">
+        </div>
+        </div>
+        
+        
+    </section>
+
+    <section class="section-secundaria">
+        <img class="image-secundaria" src="img/imagem-secundaria.png" alt="">
+        <div class="conteudo-convite">
+            <div class="title">
+                <h2>Olá, Shalom</h2>
+                <p></p>
+            </div>
+            <p>
+              Simmm! você foi convidado (a) para estar conosco nesse dia tão especial.  <br> Um dia que vamos nos unir e nos tornar uma só carne, um só propósito. <br>
+
+Venha compartilhar conosco esse momento tão especial, onde celebramos o amor. <br>
+
+Amar não é olhar um para o outro, mas sim olhar juntos na mesma direção, para o mesmo propósito e olhar para o mesmo Alvo, e o nosso Alvo é Cristo! <br>
+
+Nada como amor, risadas e uma boa festa para unir todos! E Contamos com você. <br>
+
+Não esqueçam de confirmar sua presença.
+
+Deus vos abençoe!
+            </p>
+        </div>
+    </section>
+
+
+    <section class="maps">
+        <p class="p-local">Localização</p>
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2314968500214!2d-60.0088181!3d-3.0324541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c19f60107b413%3A0x7f0f12f35eb049f!2sR.%20S%C3%A3o%20Luiz%2C%2015%20-%20Novo%20Israel%2C%20Manaus%20-%20AM%2C%2069039-450!5e0!3m2!1spt-BR!2sbr!4v1752345313743!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="formulario">
+        <form id="formulario">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" required>
+
+            <label>Você irá ao evento?</label>
+            <div class="radio-group">
+            <input type="radio" name="presenca" value="Sim" checked> Sim
+            <input type="radio" name="presenca" value="Não"> Não
+            </div>
+
+            <label for="adultos">Quantidade de adultos incluindo você</label>
+            <input type="number" id="adultos" min="1" value="1" required>
+
+            <label for="criancas">Quantidade de crianças</label>
+            <input type="number" id="criancas" min="0" value="0" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required>
+
+            <label for="telefone">Telefone para contato</label>
+            <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" placeholder="Escreva aqui se tiver algo importante..."></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    </section>
+    
+    
+
+    <section class="section-terciaria">
+      
+        <img class="img-terciaria" src="img/nosso-pix.png">
+        <img class="imagem-terciaria" src="img/imagem-terciaria.png">
+
+<!-- -------------------------AUDIO--------------------------- -->
+       <div class="container-audioo">
+    <p class="descricao">Escute a nossa música favorita!</p>
+
+    <div class="player">
+      <img src="img/imagem-musica.png" alt="Capa do álbum" class="capa">
+
+      <div class="info">
+        <h2 class="musica">Lindo Momento</h2>
+        <p class="artista">Jullyan Lemos</p>
+
+        <div class="barra">
+          <div class="progresso" id="progresso"></div>
+        </div>
+      </div>
+
+      <div class="tempo-e-play">
+        <span class="tempo" id="tempo">00:00</span>
+        <button id="playPauseBtn" class="play-btn">&#9654;</button>
+      </div>
+    </div>
+
+    <audio id="audio" src="Lindo Momento - Julliany Souza Letra [ZskFo6Qn3ME] (1).mp3"></audio>
+  </div>
+   
+
+
+  

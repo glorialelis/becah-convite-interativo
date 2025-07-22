@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Player de Música</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .descricao {
+      font-size: 1rem;
+      color: #5a6780;
+      margin-bottom: 12px;
+    }
+
+    .player {
+      display: flex;
+      align-items: center;
+      background-color: #446084;
+      padding: 16px;
+      border-radius: 12px;
+      width: 360px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .capa {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 12px;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .musica {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .artista {
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      opacity: 0.9;
+    }
+
+    .barra {
+      width: 100%;
+      height: 4px;
+      background-color: #ffffff50;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progresso {
+      width: 0%;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .tempo-e-play {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 12px;
+    }
+
+    .tempo {
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+
+    .play-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="descricao">Escute a nossa música favorita!</p>
+
+    <div class="player">
+      <img src="capa.jpg" alt="Capa do álbum" class="capa">
+
+      <div class="info">
+        <h2 class="musica">Lindo Momento</h2>
+        <p class="artista">Jullyan Lemos</p>
+
+        <div class="barra">
+          <div class="progresso" id="progresso"></div>
+        </div>
+      </div>
+
+      <div class="tempo-e-play">
+        <span class="tempo" id="tempo">00:00</span>
+        <button id="playPauseBtn" class="play-btn">&#9654;</button>
+      </div>
+    </div>
+
+    <audio id="audio" src="musica.mp"></audio>
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const tempo = document.getElementById('tempo');
+    const progresso = document.getElementById('progresso');
+
+    let tocando = false;
+
+    playPauseBtn.addEventListener('click', () => {
+      if (tocando) {
+        audio.pause();
+        playPauseBtn.innerHTML = "&#9654;"; // ▶
+      } else {
+        audio.play();
+        playPauseBtn.innerHTML = "&#10074;&#10074;"; // ❚❚
+      }
+      tocando = !tocando;
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      const minutos = Math.floor(audio.currentTime / 60);
+      const segundos = Math.floor(audio.currentTime % 60)
+        .toString()
+        .padStart(2, '0');
+      tempo.textContent = `${minutos}:${segundos}`;
+
+      const porcentagem = (audio.currentTime / audio.duration) * 100;
+      progresso.style.width = `${porcentagem}%`;
+    });
+
+    audio.addEventListener('ended', () => {
+      playPauseBtn.innerHTML = "&#9654;";
+      tocando = false;
+      progresso.style.width = `0%`;
+      tempo.textContent = "00:00";
+    });
+  </script>
+</body>
+</html>

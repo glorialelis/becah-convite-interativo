@@ -1,0 +1,615 @@
+/* ----------DECLARANDO VARIÁVEIS---------- */
+@font-face {
+  font-family: Abhalibre;
+  src: url(fontes/AbhayaLibre-Regular.ttf);
+}
+@font-face{
+    font-family: Ballet;
+    src: url(fontes/Ballet-Regular-VariableFont_opsz.ttf);
+}
+/* -----------importando font----------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --azul:#6787B2;
+    --branco: #ffff;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #EFEEE9;
+    /* overflow-x: hidden;
+    background: url(img/bg-paper.png);
+    background-size: cover; */
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* -------------------Sessão Inicial-------------------- */
+.section-primaria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-primaria-conteudo-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 1rem;
+    
+}
+
+.logo-RM{
+    width: 5rem;
+}
+
+.container-vers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.imagem-principal{
+    width: 100%;
+}
+
+.calendario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendario-img{
+    width: 80%;
+}
+
+h1{
+    font-family: Ballet;
+    color: var(--azul);
+    font-size: 3rem;
+    font-weight: 100;
+    white-space: nowrap;
+}
+
+h2{
+    font-family: Abhalibre;
+    color: var(--azul);
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+p{
+    font-family: "Montserrat", sans-serif;
+    color: var(--azul);
+    font-size: .90rem;
+}
+
+/* ----------------Segunda Sessão--------------- */
+
+.image-secundaria{
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.conteudo-convite{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.formulario{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.section-terciaria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.confirme-img{
+    width: 80%;
+}
+
+.img-terciaria{
+    width: 70%;
+    padding: 2rem;
+}
+.imagem-terciaria{
+    width: 70%;
+    border-radius: 10px;
+}
+/* -----------------------Terceira Sessão------------------- */
+.player{
+      height: 95vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+  }
+    .wrapper{
+      border: 1px solid transparent;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: #ddd;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    
+    .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    border:2px solid 	#FFFAFA;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-box-shadow: 0px 6px 5px black;
+    -webkit-box-shadow: 0px 6px 5px black;
+    box-shadow: 0px 6px 5px black;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+    }
+    
+    .now-playing {
+    font-size: 1rem;
+    }
+    
+    .track-name {
+    font-size: 2.5rem;
+    }
+    
+    .track-artist {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    }
+    
+    .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    }
+    .active{
+        color: black;
+    }
+    
+    .repeat-track,
+    .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+    }
+    
+    .repeat-track:hover,
+    .random-track:hover,
+    .playpause-track:hover,
+    .prev-track:hover,
+    .next-track:hover {
+    opacity: 1.0;
+    }
+    
+    .slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #83A9FF;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    }
+    
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #3774FF;
+    cursor: grab;
+    border-radius: 100%;
+    }
+    
+    .seek_slider:hover,
+    .volume_slider:hover {
+    opacity: 1.0;
+    }
+    
+    .seek_slider {
+    width: 60%;
+    }
+    
+    .volume_slider {
+    width: 30%;
+    }
+    
+    .current-time,
+    .total-duration {
+    padding: 10px;
+    }
+    
+    i.fa-volume-down,
+    i.fa-volume-up {
+    padding: 10px;
+    }
+    
+    i,
+    i.fa-play-circle,
+    i.fa-pause-circle,
+    i.fa-step-forward,
+    i.fa-step-backward,
+    p {
+    cursor: pointer;
+    }
+    .randomActive{
+        color: black;
+    }
+    .rotate {
+        animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+    }
+    .loader {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader .stroke{
+        background: #f1f1f1;
+        height: 150%;
+        width: 10px;
+        border-radius: 50px;
+        margin: 0 5px;
+        animation: animate 1.4s linear infinite;
+    }
+      @keyframes animate {
+        50% {
+          height: 20%;
+          background: #4286f4;
+        }
+    
+        100% {
+          background: #4286f4;
+          height: 100%;
+        }
+      }
+      .stroke:nth-child(1){
+          animation-delay: 0s;
+      }
+      .stroke:nth-child(2){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(3){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(4){
+        animation-delay: 0.9s;
+    }
+    .stroke:nth-child(5){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(6){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(7){
+        animation-delay: 0s;
+    }
+    
+
+    /* -------------------FORMULARIO--------------- */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    } */
+
+    form {
+      background-color: #ffffff;
+      padding: 60px;
+      max-width: 500px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      font-family: Abhalibre;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #335b99;
+      
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #e6f0fa;
+      font-size: 14px;
+      outline: none;
+      color: var(--azul);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+    color: var(--azul); 
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .radio-group {
+      color: var(--azul);
+      font-family:  Abhalibre ;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #8bb8e8, #3b5998);
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        padding: 15px;
+      }
+
+      label {
+        font-size: 15px;
+      }
+
+      input, textarea, button {
+        font-size: 14px;
+      }
+    }
+
+    /* --------------------AUDIO---------------------- */
+
+   /* * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    } */
+
+    /* body {
+      background: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    } */
+
+    .container-audioo {
+      padding: 2rem;
+      text-align: center;
+      /* width: 100%;
+      max-width: 400px; */
+    }
+
+    .descricao {
+      font-size: 1rem;
+      color: #5a6780;
+      margin-bottom: 12px;
+    }
+
+    .player {
+      display: flex;
+      align-items: center;
+      background-color: #446084;
+      padding: 16px;
+      border-radius: 12px;
+      width: 100%;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+      height: 10%;
+      font-family: Abhalibre;
+    }
+
+    .capa {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .musica {
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .artista {
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      opacity: 0.9;
+      text-align: left;
+    }
+
+    .barra {
+      width: 100%;
+      height: 4px;
+      background-color: #ffffff50;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progresso {
+      width: 0%;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .tempo-e-play {
+      
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 12px;
+    }
+
+    .tempo {
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+
+    .play-btn {
+      background: none;
+      border: none;
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+    }
+
+
+     /* Responsivo para telas menores */
+    @media (max-width: 420px) {
+      .player {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .capa {
+        margin-right: 0;
+      }
+
+      .info {
+        text-align: center;
+      }
+
+      .tempo-e-play {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        margin-left: 0;
+      }
+
+      .musica, .artista {
+        text-align: center;
+      }
+<<<<<<< HEAD:style.css
+=======
+    }
+
+    /* -------------------------MAPA--------------------------------- */
+    .p-local{
+      font-family: Abhalibre;
+      font-size: 1.50rem;
+      font-weight: 600;
+      
+    }
+
+    .maps{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 3rem ;
+    }
+
+    .mapa{
+      width: 90%;
+      height: 30%;
+
+>>>>>>> 8d479af (integração do mapa):convite becah/style.css
+    }
