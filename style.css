@@ -346,6 +346,16 @@ p{
     .stroke:nth-child(7){
         animation-delay: 0s;
     }
+
+    .faltam{
+      text-align: center;
+    }
+    #countdown {
+      font-size: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #6787B2;
+      padding: 0rem 0rem 4rem 0rem;
+    }
     
 
     /* -------------------FORMULARIO--------------- */
@@ -581,11 +591,11 @@ p{
         margin-left: 0;
       }
 
+      
+
       .musica, .artista {
         text-align: center;
       }
-<<<<<<< HEAD:style.css
-=======
     }
 
     /* -------------------------MAPA--------------------------------- */
@@ -609,7 +619,5 @@ p{
 
     .mapa{
       width: 90%;
-      height: 30%;
-
->>>>>>> 8d479af (integração do mapa):convite becah/style.css
+      height: 30%
     }

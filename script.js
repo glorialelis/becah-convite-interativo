@@ -64,3 +64,28 @@ const audio = document.getElementById('audio');
       progresso.style.width = `0%`;
       tempo.textContent = "00:00";
     });
+
+    // -------------------------------countdown--------------------------------------
+    const targetDate = new Date("2025-10-25T19:30:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").textContent = "Chegou a hora.";
+        clearInterval(interval);
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").textContent =
+        `${d} dias ${h} horas ${m} min ${s} seg`;
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
